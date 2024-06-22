@@ -1,8 +1,6 @@
 # bone-fracture-7fylg_Yolov10
 From dataset https://universe.roboflow.com/roboflow-100/bone-fracture-7fylg  a model is obtained, based on yolov10, with that custom dataset, to indicate fractures in x-rays.
 
-
-
 ===
 Installation:
 
@@ -48,7 +46,7 @@ Download de file
 
 If you do not have a roboflow user key, you can obtain one at https://docs.roboflow.com/api-reference/authentication.
 
-After downloading the dataset a folder named bone-fracture-7fylg_Yolov10 is created wich must be moved to the project folder( bone-fracture-7fylg_Yolov10)
+After downloading the dataset a folder named bone-fracture-2 is created wich must be moved to the project folder( bone-fracture-7fylg_Yolov10)
 
 
 
@@ -65,8 +63,6 @@ also uses the .yaml file:
 data.yaml
 
 In data.yaml the absolute addresses of the project appear assuming that it has been installed on disk C:, if it has another location these absolute addresses will have to be changed.
-
-
 
 The best result has been found in the last.pt of 190 epoch, although when reaching the end, in 200 epoch, it seems that the values ​​of mAP50 and mAP50-95 are better. Which would indicate that the training has overfitting
 
