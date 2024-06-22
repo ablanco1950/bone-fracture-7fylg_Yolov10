@@ -1,0 +1,13 @@
+train: C:/bone-fracture-7fylg_Yolov10/bone-fracture-2/train/images
+val: C:/bone-fracture-7fylg_Yolov10/bone-fracture-2/valid/images
+test: C:/bone-fracture-7fylg_Yolov10/bone-fracture-2/test/images
+
+nc: 4
+names: ['angle', 'fracture', 'line', 'messed_up_angle']
+
+roboflow:
+  workspace: roboflow-100
+  project: bone-fracture-7fylg_Yolov10
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/roboflow-100/bone-fracture-7fylg/dataset/2
