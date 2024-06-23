@@ -58,6 +58,8 @@ This program has been adapted from https://medium.com/@huzeyfebicakci/custom-dat
 
 It assumes that the project is located in the folder "C:/bone-fracture-7fylg_Yolov10", otherwise the assignment must be changed by modifying line 22
 
+The parameter multi_scale has been changed to true.
+
 also uses the .yaml file:
 
 data.yaml
