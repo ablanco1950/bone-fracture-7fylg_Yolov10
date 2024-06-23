@@ -69,6 +69,12 @@ In data.yaml the absolute addresses of the project appear assuming that it has b
 The best result has been found in the last.pt of 190 epoch, although when reaching the end, in 200 epoch, it seems that the values ​​of mAP50 and mAP50-95 are better. Which would indicate that the training has overfitting
 
 ===
+Conclusions and improvements:
+
+The success rate does not reach 65%, but it is observed that the different models, even those obtained at different times of training, are complementary and that when a fracture is detected, its position is well located.
+Therefore, better results would be obtained by testing several models in cascade.
+
+===
 References
 
 https://universe.roboflow.com/roboflow-100/bone-fracture-7fylg/model/1
