@@ -51,7 +51,7 @@ After downloading the dataset a folder named bone-fracture-2 is created which mu
 
 Execute TrainFracture-7fylg_Yolov10.py
 
-This program has been adapted from https://medium.com/@huzeyfebicakci/custom-dataset-training-with-yolov10-a-deep-dive-into-the-latest-evolution-in-real-time-object-ab8c62c6af85 It assumes that the project is located in the folder "C:/bone -fracture-7fylg_Yolov10", otherwise the assignment must be changed by modifying line 22 The parameter multi_scale has been changed to true.
+This program has been adapted from https://medium.com/@huzeyfebicakci/custom-dataset-training-with-yolov10-a-deep-dive-into-the-latest-evolution-in-real-time-object-ab8c62c6af85 It assumes that the project is located in the folder "C:/bone-fracture-7fylg_Yolov10", otherwise the assignment must be changed by modifying line 22 The parameter multi_scale has been changed to true.
 
 also uses the .yaml file:
 
@@ -61,7 +61,7 @@ In data.yaml the absolute addresses of the project appear assuming that it has b
 
 Conclusions:
 
-Instead  of performing a long training process, it has been preferred to use a short training process obtaining different models (some with yolov10s and others with yolov10n, see instructions 28 and 29 of TrainFracture-7fylg_Yolov10.py) and using the models in cascade so that If one did not detect fractures, the next one was passed on to see if he was able to detect them.
+Instead  of performing a long training process, it has been preferred to use a short training process obtaining different models (some with yolov10s and others with yolov10n, see instructions 28 and 29 of TrainFracture-7fylg_Yolov10.py), with few epochs, and using the models in cascade so that If one did not detect fractures, the next one was passed on to see if he was able to detect them.
 
 === References
 
