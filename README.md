@@ -61,7 +61,7 @@ Instead  of performing a long training process, it has been preferred to use a s
 
 https://universe.roboflow.com/roboflow-100/bone-fracture-7fylg/model/1
 
-https://medium.com/@huzeyfebicakci/custom-dataset-training-with-yolov10-a- deep-dive-into-the-latest-evolution-in-real-time-object-ab8c62c6af85 
+https://medium.com/@huzeyfebicakci/custom-dataset-training-with-yolov10-a-deep-dive-into-the-latest-evolution-in-real-time-object-ab8c62c6af85 
 
 https://github.com/ablanco1950/Fracture.v1i_Reduced_YoloFromScratch
 
