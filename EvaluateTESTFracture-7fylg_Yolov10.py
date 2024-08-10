@@ -15,17 +15,25 @@ dirname= "test\\images"
 dirnameLabels="test\\labels"
 
 
-#dirnameYolo="runs\\train\\exp2\\weights\\last28Hits190epoch.pt"
-dirnameYolo="last28Hits190epoch.pt"
-
+#dirnameYolo="runs\\train\\exp4\\weights\\last28Hits190epoch.pt"
+#dirnameYolo="last28Hits190epoch.pt"
+dirnameYolo="runs\\train\\exp10\\weights\\last.pt"
+#dirnameYolo="runs\\train\\exp7\\weights\\last82epoch18Hits.pt"
+#dirnameYolo="runs\\train\\exp7\\weights\\best11epoch.pt"
+#dirnameYolo="runs\\train\\exp7\\weights\\last80epoch16Hits.pt"
+#dirnameYolo="runs\\train\\exp7\\weights\\last72epoch.pt"
+#dirnameYolo="runs\\train\\exp7\\weights\\last58epoch.pt"
+dirnameYolo="last20epoch25hits.pt"
 
 import cv2
 import time
 Ini=time.time()
 
-from ultralytics import YOLOv10
+#from ultralytics import YOLOv10
+from ultralytics import YOLO
 
-model = YOLOv10(dirnameYolo)
+#model = YOLOv10(dirnameYolo)
+model = YOLO(dirnameYolo)
 
 class_list = model.model.names
 print(class_list)

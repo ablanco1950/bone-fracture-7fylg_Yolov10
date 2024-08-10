@@ -11,7 +11,8 @@ import ultralytics
 # https://blog.roboflow.com/yolov10-how-to-train/
 # en mi caso:
 #(alfonso1) C:\Users\Alfonso Blanco\.conda\envs\alfonso1\Scripts>python pip-script.py install git+https://github.com/THU-MIG/yolov10.git
-from ultralytics import YOLOv10
+#from ultralytics import YOLOv10
+from ultralytics import YOLO
 import torch
 
 class ObjectDetection:
@@ -24,15 +25,17 @@ class ObjectDetection:
     def train(self, runName):
         # downloaded from https://github.com/THU-MIG/yolov10/releases/tag/v1.1
         
-        model = YOLOv10("yolov10n.pt")
+        #model = YOLOv10("yolov10n.pt")
+        model = YOLO("yolov10s.pt")
         
         #yaml_path = os.path.join(self.dir, 'yaml_file.yaml')
         #yaml_path = "bone-fracture-2/data.yaml"
         yaml_path = "data.yaml"
         results = model.train(
             data= yaml_path,         # Path to your dataset config file
-            batch = 16,               # Training batch size
-            imgsz= 640,                   # Input image size
+            #batch = 16,               # Training batch size
+            batch=-1,     # dinamically assigned
+            #imgsz= 640,                   # Input image size
             #epochs= 2000,                  # Number of training epochs
             epochs= 200,                  # Number of training epochs
             optimizer= 'SGD',             # Optimizer, can be 'Adam', 'SGD', etc.
