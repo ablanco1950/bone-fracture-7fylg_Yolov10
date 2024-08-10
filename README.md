@@ -3,7 +3,9 @@ From dataset https://universe.roboflow.com/roboflow-100/bone-fracture-7fylg a mo
 
 === Installation: Download all project datasets to a folder on disk.
 
-Install yolov10 (if not yet installed) following the instructions given at: https://blog.roboflow.com/yolov10-how-to-train/ which may be reduced to !pip install -q git+https://github. com/THU-MIG/yolov10.git
+Install yolov10 (if not yet installed) following the instructions given at: https://blog.roboflow.com/yolov10-how-to-train/ 
+
+which may be reduced to !pip install -q git+https://github.com/THU-MIG/yolov10.git
 
 If you already have ultralytics installed, it would be advisable to upgrade ultralytics, unless you have applications based on yolov10 without updating, which could be affected by the update.
 
