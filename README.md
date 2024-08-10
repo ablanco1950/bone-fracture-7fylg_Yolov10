@@ -39,7 +39,9 @@ Is attached ComparingWithRoboflow.xlsx spreadsheet with the results
 
 The project comes with an optimized model: last20epoch25hits.pt
 
-To obtain this model, the following has been executed: Download de file https://universe.roboflow.com/roboflow- 100/bone-fracture-7fylg If you do not have a roboflow user key, you can obtain one at https://docs.roboflow.com/api-reference/authentication.
+To obtain this model, the following has been executed: Download de file https://universe.roboflow.com/roboflow-100/bone-fracture-7fylg
+
+If you do not have a roboflow user key, you can obtain one at https://docs.roboflow.com/api-reference/authentication.
 
 After downloading the dataset a folder named bone-fracture-2 is created which must be moved to the project folder( bone-fracture-7fylg_Yolov10)
 
