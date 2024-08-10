@@ -19,7 +19,9 @@ python pip-script.py install --upgrade ultralytics
 
 And download from https://github.com/THU-MIG/yolov10/releases the yolov10n.pt and yolov10s.pt model. In case this operation causes problems, these files are attached with the rest of the project files.
 
-Unzip the test.zip folder Some zip decompressors duplicate the name of the folder to be decompressed; a folder that contains another folder with the same name, should only contain one. In these cases it will be enough to cut the innermost folder and copy it to the project folder.
+Unzip the test.zip folder
+
+Some zip decompressors duplicate the name of the folder to be decompressed; a folder that contains another folder with the same name, should only contain one. In these cases it will be enough to cut the innermost folder and copy it to the project folder.
 
 === Test: It is executed:
 
