@@ -31,7 +31,7 @@ The results are obtained by executing:
 
 EvaluateTESTFracture-7fylg_SeveralModels_Yolov10.py
 
-The results are similar, even better, to yhose obtained by testing each image in the test file on the platform https://universe.roboflow.com/roboflow-100/bone-fracture-7fylg/model/1.
+The results are similar, even better, than those obtained by testing each image in the test file on the platform https://universe.roboflow.com/roboflow-100/bone-fracture-7fylg/model/1.
 
 Is attached ComparingWithRoboflow.xlsx spreadsheet with the results
 
