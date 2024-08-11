@@ -27,7 +27,9 @@ Some zip decompressors duplicate the name of the folder to be decompressed; a fo
 
 EvaluateTESTFracture-7fylg_Yolov10.py
 
-The x-rays are presented on the screen with a red box indicating the prediction . The console indicates the images in which no fracture has been detected and the errors asigning fracture classes The results have been obtained using only one model.
+The x-rays are presented on the screen with a red box indicating the prediction, with a green box the label of the image that must indicate te true position but sometimes is aproximated
+
+The console indicates the images in which no fracture has been detected and the errors asigning fracture classes The results have been obtained using only one model.
 
 In case of using several models: if one does not detect a fracture, another is tested and so on. The results are better at the risk of making false detections.
 
