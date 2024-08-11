@@ -82,3 +82,19 @@ https://medium.com/@huzeyfebicakci/custom-dataset-training-with-yolov10-a-deep-d
 https://github.com/ablanco1950/Fracture.v1i_Reduced_YoloFromScratch
 
 https://github.com/ablanco1950/PointOutWristPositiveFracture_on_xray
+
+citations:
+
+@misc{
+                            science-research-2022:-bone-fracture-detection_dataset,
+                            title = { Science Research 2022: Bone Fracture Detection Dataset },
+                            type = { Open Source Dataset },
+                            author = { Science Research },
+                            howpublished = { \url{ https://universe.roboflow.com/science-research/science-research-2022:-bone-fracture-detection } },
+                            url = { https://universe.roboflow.com/science-research/science-research-2022:-bone-fracture-detection },
+                            journal = { Roboflow Universe },
+                            publisher = { Roboflow },
+                            year = { 2022 },
+                            month = { dec },
+                            note = { visited on 2024-08-11 },
+                            }
