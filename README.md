@@ -75,6 +75,8 @@ The strippedModel.py program has been incorporated, which has been used to reduc
 ![Fig2](https://github.com/ablanco1950/bone-fracture-7fylg_Yolov10/blob/main/Figure_2.png)
 ![Fig3](https://github.com/ablanco1950/bone-fracture-7fylg_Yolov10/blob/main/Figure_3.png)
 ![Fig4](https://github.com/ablanco1950/bone-fracture-7fylg_Yolov10/blob/main/Figure_4.png)
+![Fig5](https://github.com/ablanco1950/bone-fracture-7fylg_Yolov10/blob/main/Figure_5.png)
+![Fig6](https://github.com/ablanco1950/bone-fracture-7fylg_Yolov10/blob/main/Figure_6.png)
 
 === References
 
