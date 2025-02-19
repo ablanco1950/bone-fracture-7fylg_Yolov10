@@ -115,12 +115,13 @@ def loadlabels(dirnameLabels):
 
                  Label=""
                  xyxy=""
+                 TabLinxyxy=[]
                  for linea in f:
                       
                       indexFracture=int(linea[0])
                       Label=class_list[indexFracture]
                       xyxy=linea[2:]
-                      
+                      TabLinxyxy.append(xyxy)
                                             
                  Labels.append(Label)
                  
@@ -130,7 +131,7 @@ def loadlabels(dirnameLabels):
                      ContNoLabels+=1 
                  
                  TabFileLabelsName.append(filename)
-                 Tabxyxy.append(xyxy)
+                 Tabxyxy.append(TabLinxyxy)
      return Labels, TabFileLabelsName, Tabxyxy, ContLabels, ContNoLabels
 
 def unconvert(width, height, x, y, w, h):
@@ -384,51 +385,50 @@ for i in range (len(imagesComplete)):
             gray=imagesComplete[i]
            
             imgTrue=imagesComplete[i]
-           
-            XcenterYcenterWH=TabxyxyTrue[i].split(" ")
-            width=float(imgTrue.shape[0])
-            height=float(imgTrue.shape[1])
-            x=float(XcenterYcenterWH[0])
-            y=float(XcenterYcenterWH[1])
-            w=float(XcenterYcenterWH[2])
-            h=float(XcenterYcenterWH[3])
-            xTrue,yTrue,xMaxTrue,yMaxTrue=unconvert(width, height, x, y, w, h)
-           
-            start_pointTrue=(int(xTrue),int(yTrue)) 
-            end_pointTrue=(int(xMaxTrue),int( yMaxTrue))
-           
-            colorTrue=(0,0,255)
+            #print(imgTrue.shape)
             
-            # Using cv2.rectangle() method
-            # Draw a rectangle with green line borders of thickness of 2 px
-            imgTrue = cv2.rectangle(imgTrue, start_pointTrue, end_pointTrue,(0,255,0), 2)
-           
-            # Put text
-            text_locationTrue = (int(xMaxTrue),int(yMaxTrue))
-            text_colorTrue = (255,255,255)
-            #cv2.putText(imgTrue, Labels[i] ,text_locationTrue
-            #            , cv2.FONT_HERSHEY_SIMPLEX , 1
-            #            , text_colorTrue, 2 ,cv2.LINE_AA)
-            cv2.putText(imgTrue, "" ,text_locationTrue
-                        , cv2.FONT_HERSHEY_SIMPLEX , 1
-                        , text_colorTrue, 1 ,cv2.LINE_AA)
 
+         
             #cv2.imshow('True', imgTrue)
             #cv2.waitKey(0)
 
-            #"""
+            
             Tabconfidence, TabImgSelect, y, yMax, x, xMax, Tabclass_name, Tabclass_cod =DetectBoneFractureWithYolov10(gray)
             Tabnms_boxes=[]
             #print(gray.shape)
             if TabImgSelect==[]:
                 print(TabFileName[i] + " NON DETECTED")
-                ContNoDetected=ContNoDetected+1 
-                continue
+                ContNoDetected=ContNoDetected+1
+                
+                #continue
             else:
                 #ContDetected=ContDetected+1
                 print(TabFileName[i] + " DETECTED ")
+
+            for j in range(len(TabxyxyTrue[i])):
+                 XcenterYcenterWH=TabxyxyTrue[i][j].split(" ")
+                 widthTrue=float(imgTrue.shape[1])
+                 heightTrue=float(imgTrue.shape[0])
+                 xTrue=float(XcenterYcenterWH[0])
+                 yTrue=float(XcenterYcenterWH[1])
+                 wTrue=float(XcenterYcenterWH[2])
+                 hTrue=float(XcenterYcenterWH[3])
+                 xTrue,yTrue,xMaxTrue,yMaxTrue=unconvert(widthTrue, heightTrue, xTrue, yTrue, wTrue, hTrue)
                 
+                 start_pointTrue=(int(xTrue),int(yTrue)) 
+                 end_pointTrue=(int(xMaxTrue),int( yMaxTrue))
                 
+                 colorTrue=(0,0,255)    
+
+                 # Using cv2.rectangle() method
+                 # Draw a rectangle with green line borders of thickness of 2 px
+                 imgTrue = cv2.rectangle(imgTrue, start_pointTrue, end_pointTrue,(0,255,0), 2)
+
+
+            if TabImgSelect==[]:
+                 plot_image(imgTrue, [[0, 0, 0, 0, 0, 0]], TabxyxyTrue[i], img, TabFileName[i])
+                 continue    
+                           
             for z in range(len(TabImgSelect)):
                 #if TabImgSelect[z] == []: continue
                 gray1=TabImgSelect[z]
